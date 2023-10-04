@@ -13,16 +13,6 @@ class Theme(BaseModel):
         return hash(self.theme)
 
 
-class PhraseStored(BaseModel):
-    phrase: str
-    theme: str
-
-    def __init__(self, phrase: str, theme: str, **kwargs):
-        super().__init__(**kwargs)
-        self.phrase = phrase
-        self.theme = theme
-
-
 class ThemeSearchReq(BaseModel):
     query: str
 
